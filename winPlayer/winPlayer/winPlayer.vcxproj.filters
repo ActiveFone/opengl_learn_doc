@@ -54,6 +54,9 @@
     <ClInclude Include="LuaBindTest.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="ParticleTest.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -90,6 +93,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="LuaBindTest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleTest.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -161,6 +167,12 @@
       <Filter>资源文件</Filter>
     </None>
     <None Include="res\shader\objectShader.vs">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\shader\ParticleTestShader.fs">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\shader\ParticleTestShader.vs">
       <Filter>资源文件</Filter>
     </None>
   </ItemGroup>
