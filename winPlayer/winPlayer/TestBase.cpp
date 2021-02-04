@@ -76,11 +76,6 @@ void TestBase::scroll_callback(GLFWwindow* window, double xoffset, double yoffse
 //	//return localLoadTexture(path);
 //}
 
-bool TestBase::init()
-{
-	return true;
-}
-
 void TestBase::showTest(GLFWwindow *window)
 {
 	std::cout << "TestBase::showTest " << std::endl;

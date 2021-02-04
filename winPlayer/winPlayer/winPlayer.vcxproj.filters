@@ -1,179 +1,199 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="源文件">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="头文件">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="资源文件">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="Script">
       <UniqueIdentifier>{ea99b90e-679a-42ee-a68a-89534c055d5f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{43888f7e-0fc9-4544-9893-2cfea6daf107}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Instance">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Shader">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Base">
+      <UniqueIdentifier>{bf4e8945-7165-479a-a2d8-43c4913729dd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="pch.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="IlluminationTest.h">
-      <Filter>头文件</Filter>
+      <Filter>Instance</Filter>
     </ClInclude>
     <ClInclude Include="InstancingTest.h">
-      <Filter>头文件</Filter>
+      <Filter>Instance</Filter>
     </ClInclude>
     <ClInclude Include="TestBase.h">
-      <Filter>头文件</Filter>
+      <Filter>Instance</Filter>
     </ClInclude>
     <ClInclude Include="GeometryTest.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Mesh.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Model.h">
-      <Filter>头文件</Filter>
+      <Filter>Instance</Filter>
     </ClInclude>
     <ClInclude Include="ModelLoadTest.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="CommonBase.h">
-      <Filter>头文件</Filter>
+      <Filter>Instance</Filter>
     </ClInclude>
     <ClInclude Include="LightingMapTest.h">
-      <Filter>头文件</Filter>
+      <Filter>Instance</Filter>
     </ClInclude>
     <ClInclude Include="FrameBufferTest.h">
-      <Filter>头文件</Filter>
+      <Filter>Instance</Filter>
     </ClInclude>
     <ClInclude Include="LuaBindTest.h">
-      <Filter>头文件</Filter>
+      <Filter>Instance</Filter>
     </ClInclude>
     <ClInclude Include="ParticleTest.h">
-      <Filter>头文件</Filter>
+      <Filter>Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyFrameAnimTest.h">
+      <Filter>Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonBase.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="shader_m.h">
+      <Filter>Base</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="pch.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="winPlayer.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="glad.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="IllumationTest.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="InstancingTest.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="TestBase.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="CommonBase.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="FrameBufferTest.cpp">
+      <Filter>Instance</Filter>
     </ClCompile>
     <ClCompile Include="GeometryTest.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Instance</Filter>
     </ClCompile>
-    <ClCompile Include="ModelLoadTest.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="IllumationTest.cpp">
+      <Filter>Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="InstancingTest.cpp">
+      <Filter>Instance</Filter>
     </ClCompile>
     <ClCompile Include="LightingMapTest.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="FrameBufferTest.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Instance</Filter>
     </ClCompile>
     <ClCompile Include="LuaBindTest.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelLoadTest.cpp">
+      <Filter>Instance</Filter>
     </ClCompile>
     <ClCompile Include="ParticleTest.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="TestBase.cpp">
+      <Filter>Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="winPlayer.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="glad.c">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyFrameAnimTest.cpp">
+      <Filter>Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="CommonBase.cpp">
+      <Filter>Base</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="res\shader\FrameBufferScreenShader.fs">
-      <Filter>资源文件</Filter>
+      <Filter>Shader</Filter>
     </None>
     <None Include="res\shader\FrameBufferScreenShader.vs">
-      <Filter>资源文件</Filter>
+      <Filter>Shader</Filter>
     </None>
     <None Include="res\shader\FrameBufferTestShader.fs">
-      <Filter>资源文件</Filter>
+      <Filter>Shader</Filter>
     </None>
     <None Include="res\shader\FrameBufferTestShader.vs">
-      <Filter>资源文件</Filter>
+      <Filter>Shader</Filter>
     </None>
     <None Include="res\shader\geometryModelDefaultShader.fs">
-      <Filter>资源文件</Filter>
+      <Filter>Shader</Filter>
     </None>
     <None Include="res\shader\geometryModelDefaultShader.vs">
-      <Filter>资源文件</Filter>
+      <Filter>Shader</Filter>
     </None>
     <None Include="res\shader\geometryModelTestShader.fs">
-      <Filter>资源文件</Filter>
+      <Filter>Shader</Filter>
     </None>
     <None Include="res\shader\geometryModelTestShader.gs">
-      <Filter>资源文件</Filter>
+      <Filter>Shader</Filter>
     </None>
     <None Include="res\shader\geometryModelTestShader.vs">
-      <Filter>资源文件</Filter>
+      <Filter>Shader</Filter>
     </None>
     <None Include="res\shader\geometryTestNormalShader.fs">
-      <Filter>资源文件</Filter>
+      <Filter>Shader</Filter>
     </None>
     <None Include="res\shader\geometryTestNormalShader.gs">
-      <Filter>资源文件</Filter>
+      <Filter>Shader</Filter>
     </None>
     <None Include="res\shader\geometryTestNormalShader.vs">
-      <Filter>资源文件</Filter>
+      <Filter>Shader</Filter>
     </None>
     <None Include="res\shader\geometryTestShader.fs">
-      <Filter>资源文件</Filter>
+      <Filter>Shader</Filter>
     </None>
     <None Include="res\shader\geometryTestShader.gs">
-      <Filter>资源文件</Filter>
+      <Filter>Shader</Filter>
     </None>
     <None Include="res\shader\geometryTestShader.vs">
-      <Filter>资源文件</Filter>
+      <Filter>Shader</Filter>
     </None>
     <None Include="res\shader\InstancingTestShader.fs">
-      <Filter>资源文件</Filter>
+      <Filter>Shader</Filter>
     </None>
     <None Include="res\shader\InstancingTestShader.vs">
-      <Filter>资源文件</Filter>
+      <Filter>Shader</Filter>
     </None>
     <None Include="res\shader\lampShader.fs">
-      <Filter>资源文件</Filter>
+      <Filter>Shader</Filter>
     </None>
     <None Include="res\shader\lampShader.vs">
-      <Filter>资源文件</Filter>
+      <Filter>Shader</Filter>
     </None>
     <None Include="res\shader\modelLoadingShader.fs">
-      <Filter>资源文件</Filter>
+      <Filter>Shader</Filter>
     </None>
     <None Include="res\shader\modelLoadingShader.vs">
-      <Filter>资源文件</Filter>
+      <Filter>Shader</Filter>
     </None>
     <None Include="res\shader\objectShader.fs">
-      <Filter>资源文件</Filter>
+      <Filter>Shader</Filter>
     </None>
     <None Include="res\shader\objectShader.vs">
-      <Filter>资源文件</Filter>
+      <Filter>Shader</Filter>
     </None>
     <None Include="res\shader\ParticleTestShader.fs">
-      <Filter>资源文件</Filter>
+      <Filter>Shader</Filter>
     </None>
     <None Include="res\shader\ParticleTestShader.vs">
-      <Filter>资源文件</Filter>
+      <Filter>Shader</Filter>
+    </None>
+    <None Include="res\shader\DefaultShader.fs">
+      <Filter>Shader</Filter>
+    </None>
+    <None Include="res\shader\DefaultShader.vs">
+      <Filter>Shader</Filter>
     </None>
   </ItemGroup>
 </Project>

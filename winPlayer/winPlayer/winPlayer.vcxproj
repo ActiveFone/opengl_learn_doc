@@ -164,11 +164,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="camera.h" />
     <ClInclude Include="CommonBase.h" />
     <ClInclude Include="FrameBufferTest.h" />
     <ClInclude Include="GeometryTest.h" />
     <ClInclude Include="IlluminationTest.h" />
     <ClInclude Include="InstancingTest.h" />
+    <ClInclude Include="KeyFrameAnimTest.h" />
     <ClInclude Include="LightingMapTest.h" />
     <ClInclude Include="LuaBindTest.h" />
     <ClInclude Include="Mesh.h" />
@@ -176,6 +178,7 @@
     <ClInclude Include="ModelLoadTest.h" />
     <ClInclude Include="ParticleTest.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="shader_m.h" />
     <ClInclude Include="TestBase.h" />
   </ItemGroup>
   <ItemGroup>
@@ -185,6 +188,7 @@
     <ClCompile Include="glad.c" />
     <ClCompile Include="IllumationTest.cpp" />
     <ClCompile Include="InstancingTest.cpp" />
+    <ClCompile Include="KeyFrameAnimTest.cpp" />
     <ClCompile Include="LightingMapTest.cpp" />
     <ClCompile Include="LuaBindTest.cpp" />
     <ClCompile Include="ModelLoadTest.cpp" />
@@ -199,6 +203,8 @@
     <ClCompile Include="winPlayer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="res\shader\DefaultShader.fs" />
+    <None Include="res\shader\DefaultShader.vs" />
     <None Include="res\shader\FrameBufferScreenShader.fs" />
     <None Include="res\shader\FrameBufferScreenShader.vs" />
     <None Include="res\shader\FrameBufferTestShader.fs" />

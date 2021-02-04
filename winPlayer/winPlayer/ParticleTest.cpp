@@ -40,7 +40,7 @@ void ParticleTest::showTest(GLFWwindow *window)
 		particles.push_back(Particle());
 	
 	unsigned int quadVAO, quadVBO;
-	unsigned int cubeTexture = loadTexture("res/img/smile.png");
+	unsigned int cubeTexture = loadTexture("res/img/star.png");
 
 	glGenVertexArrays(1, &quadVAO);
 	glGenBuffers(1, &quadVBO);
@@ -67,12 +67,12 @@ void ParticleTest::showTest(GLFWwindow *window)
 	float deltaTime = 0;
 	srand(glfwGetTime()); // 初始化随机种子
 
-	int num = 0;
 	for (auto &particle : particles)
 	{
+		GLfloat rColor = 0.5 + ((rand() % 100) / 100.0f);
 		particle.Life = -1 * GLfloat(rand() % 50) / 100;
 		particle.Angle = (rand() % 60);
-		num++;
+		particle.Color = glm::vec4(rColor, rColor, rColor, 1.0f);
 	}
 
 	// render loop
@@ -99,6 +99,8 @@ void ParticleTest::showTest(GLFWwindow *window)
 		glClearColor(0.1f, 0.6f, 0.5f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE);
+
 		glBindVertexArray(quadVAO);
 
 		for (auto &particle : particles)
@@ -118,8 +120,8 @@ void ParticleTest::showTest(GLFWwindow *window)
 				float x = particle.Life * cos(rad);
 
 				glm::vec2 coord = glm::vec2(x, y);
-				shader.setVec2("coord", coord);
-				shader.setFloat("opacity", (1 - particle.Life) * 0.8);
+				shader.setVec2("offset", coord);
+				shader.setVec4("color", particle.Color* (1- particle.Life));
 
 				glBindTexture(GL_TEXTURE_2D, cubeTexture);
 				glDrawArrays(GL_TRIANGLES, 0, 6);
@@ -128,6 +130,8 @@ void ParticleTest::showTest(GLFWwindow *window)
 		}
 		
 		glBindVertexArray(0);
+
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
 		glfwSwapBuffers(window);
 		glfwPollEvents();

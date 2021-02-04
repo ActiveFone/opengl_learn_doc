@@ -1,7 +1,7 @@
 #include "ModelLoadTest.h"
 //#include <iostream>
 #include <sstream>
-#include <camera.h>
+#include "camera.h"
 #include "Model.h"
 
 using namespace std;

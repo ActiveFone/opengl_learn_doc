@@ -10,7 +10,12 @@ public:
 	FrameBufferTest(const unsigned int width, const unsigned int height) :TestBase(width, height) {};
 	~FrameBufferTest() {};
 
-	void showTest(GLFWwindow *window);
+	bool init();
+
+	void update();
+
+	void clean();
+
 private:
 	unsigned int cubeVAO, cubeVBO, planeVAO, planeVBO;
 	unsigned int cubeTexture;
@@ -21,6 +26,8 @@ private:
 	unsigned int quadVAO;
 	unsigned int quadVBO;
 	unsigned int fbo;
+	Shader shader;
+	Shader screenShader;
 
 	void initObject();
 	void drawObject(Shader shader);

@@ -9,6 +9,7 @@
 #include "LightingMapTest.h"
 #include "LuaBindTest.h"
 #include "ParticleTest.h"
+#include "KeyFrameAnimTest.h"
 
 // settings
 const unsigned int SCR_WIDTH = 1280;
@@ -21,7 +22,9 @@ const unsigned int SCR_HEIGHT = 720;
 //GeometryTest testHandler(SCR_WIDTH, SCR_HEIGHT);
 //LightingMapTest testHandler(SCR_WIDTH, SCR_HEIGHT);
 //LuaBindTest testHandler(SCR_WIDTH, SCR_HEIGHT);
-ParticleTest testHandler(SCR_WIDTH, SCR_HEIGHT);
+//ParticleTest testHandler(SCR_WIDTH, SCR_HEIGHT);
+
+KeyFrameAnimTest testHandler(SCR_WIDTH, SCR_HEIGHT);
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void mouse_callback(GLFWwindow* window, double xpos, double ypos);
@@ -36,8 +39,35 @@ int main()
 	if (window == NULL)
 		return -1;
 	
-	// show test
-	testHandler.showTest(window);
+	// init test
+	testHandler.init();
+
+	float startTime = glfwGetTime();
+	float deltaTime = 1.0/30; // Ã¿Ãë30Ö¡
+
+	while (!glfwWindowShouldClose(window))
+	{
+		if ((glfwGetTime() - startTime) > deltaTime) {
+
+			std::cout << glfwGetTime() << std::endl;
+
+			// input
+			// -----
+			testHandler.processInput(window);
+
+			// update test everyFrame
+			testHandler.update();
+
+			// glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
+			// -------------------------------------------------------------------------------
+			glfwSwapBuffers(window);
+			glfwPollEvents();
+
+			startTime = glfwGetTime();
+		}
+	}
+
+	testHandler.clean();
 
 	// glfw: terminate, clearing all previously allocated GLFW resources.
 	// ------------------------------------------------------------------

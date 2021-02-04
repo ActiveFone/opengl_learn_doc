@@ -70,7 +70,7 @@ float quadVertices[] = {
 	-0.5f,  -0.5f,  15.0f, 1.0f, 1.0f,
 };
 
-void FrameBufferTest::showTest(GLFWwindow *window)
+bool FrameBufferTest::init()
 {
 	initObject();
 
@@ -83,52 +83,49 @@ void FrameBufferTest::showTest(GLFWwindow *window)
 
 	// shader configuration
 	// --------------------
-	Shader shader("res/shader/FrameBufferTestShader.vs", "res/shader/FrameBufferTestShader.fs");
+	shader.init("res/shader/FrameBufferTestShader.vs", "res/shader/FrameBufferTestShader.fs");
 	shader.use();
 	shader.setInt("texture1", 0);
 
-	Shader screenShader("res/shader/FrameBufferScreenShader.vs", "res/shader/FrameBufferScreenShader.fs");
+	screenShader.init("res/shader/FrameBufferScreenShader.vs", "res/shader/FrameBufferScreenShader.fs");
 	screenShader.use();
 	screenShader.setInt("screenTexture", 0);
 
 	glEnable(GL_DEPTH_TEST);
 	glDepthFunc(GL_LESS);
 
-	while (!glfwWindowShouldClose(window))
-	{
-		float currentFrame = glfwGetTime();
-		deltaTime = currentFrame - lastFrame;
-		lastFrame = currentFrame;
+	return true;
+}
 
-		// input
-		// -----
-		processInput(window);
+void FrameBufferTest::update()
+{
 
-		// render
-		// ------
-		//glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
-		glEnable(GL_DEPTH_TEST);
+	float currentFrame = glfwGetTime();
+	deltaTime = currentFrame - lastFrame;
+	lastFrame = currentFrame;
 
-		glClearColor(0.1f, 0.6f, 0.5f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	// render
+	// ------
+	//glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
+	glEnable(GL_DEPTH_TEST);
 
-		drawObject(shader);
+	glClearColor(0.1f, 0.6f, 0.5f, 1.0f);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-		/*glBindFramebuffer(GL_FRAMEBUFFER, 0);
-		glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	drawObject(shader);
 
-		drawScreenBuffer(screenShader);
+	/*glBindFramebuffer(GL_FRAMEBUFFER, 0);
+	glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-		glEnable(GL_DEPTH_TEST);
-		drawObject(shader);*/
+	drawScreenBuffer(screenShader);
 
-		// glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
-		// -------------------------------------------------------------------------------
-		glfwSwapBuffers(window);
-		glfwPollEvents();
-	}
+	glEnable(GL_DEPTH_TEST);
+	drawObject(shader);*/
+}
 
+void FrameBufferTest::clean()
+{
 	glDeleteVertexArrays(1, &cubeVAO);
 	glDeleteVertexArrays(1, &planeVAO);
 	glDeleteBuffers(1, &cubeVBO);
