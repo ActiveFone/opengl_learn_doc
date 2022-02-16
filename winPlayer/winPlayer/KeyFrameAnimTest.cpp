@@ -5,8 +5,8 @@ using namespace std;
 
 FrameData animConfig[] = {
 	FrameData(1, glm::vec3(-0.4f, 0, 0), 0.0f, glm::vec3(1.0f)),
-	FrameData(90, glm::vec3(0.2f, 0, 0), 90.0f, glm::vec3(0.4f)),
-	FrameData(150, glm::vec3(0.6f, 0, 0), 10.0f, glm::vec3(0.7f)),
+	FrameData(50, glm::vec3(0.2f, 0, 0), 90.0f, glm::vec3(0.4f)),
+	FrameData(110, glm::vec3(0.6f, 0, 0), 10.0f, glm::vec3(0.7f)),
 };
 
 KeyFrameAnimTest::KeyFrameAnimTest(const unsigned int width, const unsigned int height)
@@ -71,10 +71,9 @@ void KeyFrameAnimTest::update()
 	glm::mat4 Position(1.0);
 	glm::mat4 Rotate(1.0);
 	glm::mat4 Scale(1.0);
+
 	Position = glm::translate(Position, curData.Position);
-
 	Scale = glm::scale(Scale, curData.Scale);
-
 	Rotate = glm::rotate(Rotate, glm::radians(curData.Rotation), glm::vec3(0.0f, 0.0f, 1.0f));
 
 	shader.setMat4("Position", Position);

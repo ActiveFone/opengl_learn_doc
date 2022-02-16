@@ -3,10 +3,13 @@
 using namespace std;
 
 struct FrameData {
-	unsigned int keyIndex;
-	glm::vec3 Position;
-	float Rotation;
-	glm::vec3 Scale;
+	unsigned int keyIndex; //帧索引
+
+	glm::vec3 Position; //位置
+
+	float Rotation; //旋转角度
+
+	glm::vec3 Scale; //缩放比例
 
 	FrameData(unsigned int idx, glm::vec3 pos, float rote, glm::vec3 scale)
 		: keyIndex(idx), Position(pos), Rotation(rote), Scale(scale) { }
