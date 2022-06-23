@@ -68,6 +68,9 @@
     <ClInclude Include="shader_m.h">
       <Filter>Base</Filter>
     </ClInclude>
+    <ClInclude Include="SkeletalAnimTest.h">
+      <Filter>Instance</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FrameBufferTest.cpp">
@@ -111,6 +114,9 @@
     </ClCompile>
     <ClCompile Include="CommonBase.cpp">
       <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="SkeletalAnimTest.cpp">
+      <Filter>Instance</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -193,6 +199,12 @@
       <Filter>Shader</Filter>
     </None>
     <None Include="res\shader\DefaultShader.vs">
+      <Filter>Shader</Filter>
+    </None>
+    <None Include="res\shader\skeletalShader.fs">
+      <Filter>Shader</Filter>
+    </None>
+    <None Include="res\shader\skeletalShader.vs">
       <Filter>Shader</Filter>
     </None>
   </ItemGroup>

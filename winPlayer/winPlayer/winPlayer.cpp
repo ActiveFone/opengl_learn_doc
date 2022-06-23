@@ -10,10 +10,11 @@
 #include "LuaBindTest.h"
 #include "ParticleTest.h"
 #include "KeyFrameAnimTest.h"
+#include "SkeletalAnimTest.h"
 
 // settings
-const unsigned int SCR_WIDTH = 1280;
-const unsigned int SCR_HEIGHT = 720;
+const unsigned int SCR_WIDTH = 400;
+const unsigned int SCR_HEIGHT = 400;
 
 //IlluminationTest testHandler(SCR_WIDTH, SCR_HEIGHT);
 //InstancingTest testHandler(SCR_WIDTH, SCR_HEIGHT);
@@ -23,8 +24,8 @@ const unsigned int SCR_HEIGHT = 720;
 //LightingMapTest testHandler(SCR_WIDTH, SCR_HEIGHT);
 //LuaBindTest testHandler(SCR_WIDTH, SCR_HEIGHT);
 //ParticleTest testHandler(SCR_WIDTH, SCR_HEIGHT);
-
-KeyFrameAnimTest testHandler(SCR_WIDTH, SCR_HEIGHT);
+//KeyFrameAnimTest testHandler(SCR_WIDTH, SCR_HEIGHT);
+SkeletalAnimTest testHandler(SCR_WIDTH, SCR_HEIGHT);
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void mouse_callback(GLFWwindow* window, double xpos, double ypos);

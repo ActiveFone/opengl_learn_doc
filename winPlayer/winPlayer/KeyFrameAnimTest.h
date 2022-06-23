@@ -45,13 +45,13 @@ private:
 
 	float quadVerts[30] = {
 		// positions   // texture Coords
-		-0.5f, -0.5f, 0.5f,  1.0f, 0.0f,
-		-0.5f, 0.5f, 0.5f,  0.0f, 0.0f,
-		0.5f, 0.5f, 0.5f,  0.0f, 1.0f,
+		0.25f, 0.25f, 0.0f,  1.0f, 0.0f,
+		0.25f, 0.75f, 0.0f,  0.0f, 0.0f,
+		0.75f, 0.75f, 0.0f,  0.0f, 1.0f,
 
-		-0.5f, -0.5f, 0.5f,  1.0f, 0.0f,
-		0.5f, 0.5f, 0.5f,  0.0f, 1.0f,
-		0.5f, -0.5f, 0.5f,  1.0f, 1.0f,
+		0.25f, 0.25f, 0.0f,  1.0f, 0.0f,
+		0.75f, 0.75f, 0.0f,  0.0f, 1.0f,
+		0.75f, 0.25f, 0.0f,  1.0f, 1.0f,
 	};
 
 	FrameData getFrameDataByIndex(int idx);
